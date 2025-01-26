@@ -1,0 +1,14 @@
+<StackLayout>
+  <Button text="Pick Images" (tap)="pickImages()"></Button>
+  <ScrollView>
+    <StackLayout *ngIf="images.length > 0">
+      <Image
+        *ngFor="let img of images"
+        [src]="img"
+        width="100"
+        height="100"
+        margin="10"
+      ></Image>
+    </StackLayout>
+  </ScrollView>
+</StackLayout>
